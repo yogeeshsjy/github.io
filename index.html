@@ -1,0 +1,63 @@
+<!DOCTYPE html">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<meta property="og:image" content="files/shot.png"/>
+<meta property="og:title" content="Demo"/> 
+<meta property="og:description" content="Demo" />
+<meta name="og:image" content="files/shot.png"/>
+<link rel="image_src" href="files/shot.png"/>
+
+<meta name="Description" content="Join FlipHtml5 to publish and share documents with the world!">
+
+<title>Demo</title>
+<link rel="stylesheet" href="style/style.css" />
+<link rel="stylesheet" href="style/player.css" />
+<script src="javascript/main.js"></script>
+<script src="javascript/book_config.js"></script>
+<link rel="stylesheet" href="style/template.css" />
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-32955071-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+		
+	var sendvisitinfo;
+	$(document).ready(function(){
+		if(!isTouchDevice()){
+
+			var text_position = document.createElement("script");
+			text_position.src="files/search/text_position.js";
+			
+			$("head").append(text_position);
+		}
+
+               var localURL = window.location.href;		
+		if(localURL.indexOf("online.fliphtml5.com") > 0){
+			var visit_info = document.createElement("script");
+			visit_info.src = "http://fliphtml5.com/visit/visitinfo.js";
+			
+			$("head").append(visit_info);
+		}else{
+			sendvisitinfo = function(){};
+		}
+	});
+</script>
+</head>	
+<body>
+	
+	
+</body>
+</html>
